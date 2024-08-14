@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+}
+.btnDelete {
+    margin-top: 1vh;
+    margin-right: 1vw;
+    font-size: 20px;
+    display: none;
+}
+.btnDelete:hover path {
+    cursor: pointer;
+    color: red;
+    transition: .1s ease-in;
+}
+.dots {
+    font-size: 25px;
+    margin-top: 1vh;
+    width: 3vw;
+}
+.dots:hover{
+    cursor: pointer;
+    background-color: rgb(21, 32, 43);
+    border-radius: 5px;
+}
+.msgDelete {
+    margin-top: 2vh;
+    color: red;
+}
+
+@media(max-width: 960px) {
+    .dots {
+        width: 100%;
+        margin-top: 2vh;
+    }
+    .btnDelete {
+        margin-top: 2vh;
+    }
+}

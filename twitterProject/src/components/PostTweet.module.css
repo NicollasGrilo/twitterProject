@@ -1,0 +1,62 @@
+.post {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.postContainer {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2vh;
+}
+
+.postContainer input:focus {
+    border: none;
+    outline: 0;
+    color: white;
+}
+
+.postContainer input[type=text] {
+    width: 15vw;
+    font-size: 1em;
+    border: none;
+    color: white;
+}
+
+.postContainer input,
+.postContainer button {
+    background-color: rgb(21, 32, 43);
+    border-color: white;
+    border-radius: 8px;
+}
+
+.postContainer button {
+    font-size: 1em;
+    padding: .3rem;
+    font-weight: bold;
+    width: 3vw;
+    background-color: rgb(255, 212, 0);
+    border: none;
+}
+
+.btnNewTweets {
+    font-size: 1em;
+    padding: .3rem;
+    font-weight: bold;
+    width: 100%;
+    background-color: rgb(255, 212, 0);
+    border: none;
+    border-radius: 20px;
+}
+
+@media(max-width: 960px) {
+    .postContainer input[type=text] {
+        width: 50vw;
+    }
+    .postContainer button {
+        width: 8vw;
+    }
+}
