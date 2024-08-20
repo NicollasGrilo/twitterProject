@@ -36,8 +36,8 @@ const ButtonDelete = () => {
                 headers: { 'Content-Type': 'application/json' },
                 withCredentials: true
             }
-        );
-        console.log(JSON.stringify(response?.data));
+            );
+        // console.log(JSON.stringify(response?.data));
         } catch (err) {
             setTrashVisible(!trashVisible);
             if (!err?.response) {
@@ -51,8 +51,8 @@ const ButtonDelete = () => {
                 setErrMsg('Operation Failed');
             }
             errRef.current.focus();
-            deletarMsg();
         }
+        window.location.reload();
 
     }
 

@@ -15,15 +15,11 @@ const Tweets = () => {
         axiosPrivate.get('/feed')
             .then(response => {
                 setTweets(response.data.feedItens);
-                console.log(response.data.feedItens)
+                // console.log(response.data.feedItens)
             })
     }, [])
 
     const jwtToken = localStorage.getItem('accessToken');
-    
-    //const decode = token => 
-    //    decodeURIComponent(atob(token.split('.')[1].replace('-', '+').replace('_', '/')).split('')
-    //.map(c => `%${('00' + c.charCodeAt(0).toString(16)).slice(-2)}`).join(''));
 
     function decode(token) {
         const base64Url = token.split('.')[1];
@@ -46,7 +42,7 @@ const Tweets = () => {
                 const handleTweetId = () => {
                     localStorage.setItem('tweetId', tweet.tweetId);
                     localStorage.setItem('userTweet', tweet.username);
-                    console.log(localStorage);
+                    // console.log(localStorage);
                 }
                 return (
                     <div key={i} className={classes.tweetContent} onClick={handleTweetId}>

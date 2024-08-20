@@ -40,18 +40,18 @@ const LoginComponent = () => {
                     withCredentials: true
                 }
             );
-            console.log(JSON.stringify(response?.data));
+            // console.log(JSON.stringify(response?.data));
 
             setUsername('');
             setPassword('');
             localStorage.setItem('accessToken', response?.data?.accessToken);
             localStorage.setItem('username', username);
-            console.log(localStorage);
+            // console.log(localStorage);
             navigate(from, { replace: true });
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
-                console.log(err);
+                // console.log(err);
             } else if (err.response?.status === 400) {
                 setErrMsg('Missing Username or Password');
             } else if (err.response?.status === 401) {
